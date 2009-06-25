@@ -1,7 +1,8 @@
-collective.collage.portlets
-===========================
+Overview
+========
 
-Add-on that allows displaying portlets inside a collage.
+This package adds a column layout that allows the local assignment of
+portlets that will display in that column.
 
 Setup
 -----
@@ -21,3 +22,4 @@ Credits
 Malthe Borch <mborch@gmail.com>
 
 This project was funded by the University of Leicester.
+
