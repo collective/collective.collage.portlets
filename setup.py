@@ -30,4 +30,9 @@ setup(name='collective.collage.portlets',
           'Products.Collage',
           # -*- Extra requirements: -*-
       ],
+      entry_points="""
+      # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
       )
