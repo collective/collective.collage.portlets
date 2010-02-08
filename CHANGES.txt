@@ -3,6 +3,8 @@ Changelog
 
 In next release...
 
+- Compatibility with Zope 2.12.
+
 - Support for automatic configuration.
 
 0.1 (released 25/06/2009)

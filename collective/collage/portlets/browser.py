@@ -7,6 +7,7 @@ from plone.app.portlets.browser import manage
 from plone.app.portlets.browser.interfaces import IManageColumnPortletsView
 from plone.portlets.interfaces import IPortletManager
 
+from Acquisition import Explicit
 from Products.Collage.interfaces import ICollageEditLayer
 from Products.Collage.browser.views import BaseView
 
@@ -16,12 +17,12 @@ class ViewRenderer(manager.ColumnPortletManagerRenderer):
 
     def can_manage_portlets(self):
         return False
-    
+
 class EditRenderer(editmanager.ContextualEditPortletManagerRenderer):
     def inherited_portlets(self):
         return ()
 
-class ColumnPortletView(BaseView, manage.ManageContextualPortlets):
+class ColumnPortletView(Explicit, BaseView, manage.ManageContextualPortlets):
     implements(IManageColumnPortletsView)
 
     title = u"Portlets"
@@ -36,7 +37,7 @@ class ColumnPortletView(BaseView, manage.ManageContextualPortlets):
         renderer_class = ICollageEditLayer.providedBy(self.request) and \
                          EditRenderer or ViewRenderer
         renderer = renderer_class(self.context, self.request, self, self.manager)
-        self.renderer = renderer.__of__(self.context)
+        self.renderer = renderer.__of__(self)
         self.renderer.update()
 
     def __call__(self):
@@ -45,3 +46,4 @@ class ColumnPortletView(BaseView, manage.ManageContextualPortlets):
 
     def is_edit_mode(self):
         return ICollageEditLayer.providedBy(self.request)
+
