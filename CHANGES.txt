@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+- Fixed issue : Unauthorized error on portlet column access
+  (error on access to portlet view class methods)
+  [tdesvenain]
+
 0.2 (released 08/02/2010)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -12,6 +12,9 @@ from Products.Collage.interfaces import ICollageEditLayer
 from Products.Collage.browser.views import BaseView
 
 class ViewRenderer(manager.ColumnPortletManagerRenderer):
+
+    __allow_access_to_unprotected_subobjects__ = 1
+
     def inherited_portlets(self):
         return ()
 
