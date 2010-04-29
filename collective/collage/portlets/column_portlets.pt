@@ -18,9 +18,11 @@
         tal:replace="here/Description">description</span>
 </p>
 
-<div tal:replace="structure here/@@renderer">
-  Column content
-</div>
+<tal:collage-column condition="here/contentItems">
+  <div tal:replace="structure here/@@renderer">
+    Column content
+  </div>
+</tal:collage-column>
 
 <tal:edit-mode condition="view/is_edit_mode">
   <tal:manager define="view nocall: view/renderer;

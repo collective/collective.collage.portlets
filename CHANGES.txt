@@ -1,6 +1,14 @@
 Changelog
 ---------
 
+0.x (unreleased)
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Fixed issue: Extra whitespace at top of portlet column
+  if there are no content/alias items to be rendered.
+  (Now checking for content/alias items presence first)
+  [rockdj]
+
 0.3 (released 01/03/2010)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
