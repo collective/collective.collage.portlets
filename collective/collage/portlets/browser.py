@@ -28,7 +28,7 @@ class EditRenderer(editmanager.ContextualEditPortletManagerRenderer):
 class ColumnPortletView(Explicit, BaseView, manage.ManageContextualPortlets):
     implements(IManageColumnPortletsView)
 
-    title = u"Portlets"
+    title = u"Portlets Bottom"
     normalized_manager_name = "collage.portletmanager"
     renderer = None
     
@@ -50,3 +50,5 @@ class ColumnPortletView(Explicit, BaseView, manage.ManageContextualPortlets):
     def is_edit_mode(self):
         return ICollageEditLayer.providedBy(self.request)
 
+class ColumnPortletTopView(ColumnPortletView):
+    title = u"Portlets Top"

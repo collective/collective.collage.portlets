@@ -22,6 +22,16 @@
      layer="Products.Collage.interfaces.ICollageBrowserLayer"
      />
 
+    <browser:page
+       name="portlets-top"
+       for="Products.Collage.interfaces.ICollageColumn"
+       permission="zope.Public"
+       template="column_portlets_top.pt"
+       class=".browser.ColumnPortletTopView"
+       layer="Products.Collage.interfaces.ICollageBrowserLayer"
+       />
+
+
   <class class="Products.Collage.content.CollageColumn">
     <implements interface="plone.portlets.interfaces.ILocalPortletAssignable" />
   </class>
