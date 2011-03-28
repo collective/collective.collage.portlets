@@ -8,12 +8,17 @@ from plone.app.portlets.browser.interfaces import IManageColumnPortletsView
 from plone.portlets.interfaces import IPortletManager
 
 from Acquisition import Explicit
+from Products.CMFCore.utils import getToolByName
 from Products.Collage.interfaces import ICollageEditLayer
 from Products.Collage.browser.views import BaseView
 
 class ViewRenderer(manager.ColumnPortletManagerRenderer):
 
     __allow_access_to_unprotected_subobjects__ = 1
+
+    @property
+    def error_log(self):
+        return getToolByName(self.context,'error_log')
 
     def inherited_portlets(self):
         return ()
