@@ -7,7 +7,7 @@ portlets that will display in that column.
 Buildout
 --------
 
-Add collective.collage.portlets to 'eggs' and 'zcml' parameters of your [buildout] section
+Add collective.collage.portlets to 'eggs' parameter of your [buildout] section
 
 Setup
 -----
