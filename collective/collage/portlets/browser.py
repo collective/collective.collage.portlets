@@ -30,7 +30,7 @@ class EditRenderer(editmanager.ContextualEditPortletManagerRenderer):
     def inherited_portlets(self):
         return ()
 
-class ColumnPortletView(Explicit, BaseView, manage.ManageContextualPortlets):
+class ColumnPortletView(BaseView, manage.ManageContextualPortlets):
     implements(IManageColumnPortletsView)
 
     title = u"Portlets Bottom"
@@ -44,8 +44,7 @@ class ColumnPortletView(Explicit, BaseView, manage.ManageContextualPortlets):
     def update(self):
         renderer_class = ICollageEditLayer.providedBy(self.request) and \
                          EditRenderer or ViewRenderer
-        renderer = renderer_class(self.context, self.request, self, self.manager)
-        self.renderer = renderer.__of__(self)
+        self.renderer = renderer_class(self.context, self.request, self, self.manager)
         self.renderer.update()
 
     def __call__(self):
