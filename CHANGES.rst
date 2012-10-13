@@ -4,6 +4,9 @@ Changelog
 0.3.1 (released 06/19/2011)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- Moved to https://github.com/collective/collective.collage.portlets
+  [maurits]
+
 - Fixed issue: Extra whitespace at top of portlet column
   if there are no content/alias items to be rendered.
   (Now checking for content/alias items presence first)
