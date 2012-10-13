@@ -28,21 +28,21 @@
   <tal:manager define="view nocall: view/renderer;
                        manager nocall: view/manager|nothing;
                        can_manage python: manager is not None">
-    
+
     <div class="portlets-manager"
          tal:condition="can_manage"
          tal:attributes="id string:portletmanager-${view/normalized_manager_name};">
-      
+
       <div metal:use-macro="context/@@manage-portlets-macros/macros/portlet-add-form" />
       <div metal:use-macro="context/@@manage-portlets-macros/macros/current-portlets-list" />
-      
+
     </div>
-    
+
     <dl class="portalMessage info" tal:condition="not: can_manage">
       <dt i18n:translate="">Info</dt>
       <dd i18n:translate="">Portlet manager is not available.</dd>
     </dl>
-    
+
   </tal:manager>
 </tal:edit-mode>
 

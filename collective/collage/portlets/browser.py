@@ -36,7 +36,7 @@ class ColumnPortletView(Explicit, BaseView, manage.ManageContextualPortlets):
     title = u"Portlets Bottom"
     normalized_manager_name = "collage.portletmanager"
     renderer = None
-    
+
     def __init__(self, context, request):
         BaseView.__init__(self, context, request)
         self.manager = getUtility(IPortletManager, name=self.normalized_manager_name)

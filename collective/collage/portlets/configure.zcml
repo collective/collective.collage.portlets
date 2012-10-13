@@ -1,7 +1,7 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:gs="http://namespaces.zope.org/genericsetup"
            xmlns:browser="http://namespaces.zope.org/browser">
-  
+
   <include package="Products.Collage" />
   <include package="plone.app.portlets" />
 
@@ -35,5 +35,5 @@
   <class class="Products.Collage.content.CollageColumn">
     <implements interface="plone.portlets.interfaces.ILocalPortletAssignable" />
   </class>
-  
+
 </configure>
