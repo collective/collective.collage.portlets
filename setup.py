@@ -8,7 +8,7 @@ version = '0.3.1'
 setup(name='collective.collage.portlets',
       version=version,
       description="Add-on that allows displaying portlets inside a collage.",
-      long_description=open("README.txt").read() + open("CHANGES.txt").read(),
+      long_description=open("README.txt").read() + open("CHANGES.rst").read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Programming Language :: Python",
